@@ -1,0 +1,5 @@
+git init
+git add .
+git commit -m "mô-tả-commit"
+git remote add origin " ... địa chỉ url kho lưu trữ git/github"
+git push -u origin master

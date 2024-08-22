@@ -1,0 +1,21 @@
+@media (max-width: 768px){
+    .top {
+        padding: 12px;
+
+    }
+    .about-item {
+        width: 100%;
+    }
+    .food-items {
+        width: 100%;
+    }
+    .phan-hoi-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .team-items {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+}
