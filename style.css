@@ -141,7 +141,11 @@ a {
     line-height: 40px;
     font-size: 25px;
     font-family: "Roboto", sans-serif;
+    transition: color 0.3s ease;
 
+}
+.menu-items a:hover {
+    color: var(--sub-color);
 }
 /* big image */
 .big-image{
@@ -348,6 +352,12 @@ a {
     flex-wrap: wrap;
 
 }
+.book-now-container {
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    margin-top: 20px; /* Khoảng cách phía trên để nút không dính quá sát phần trên */
+}
 /* Phan hoi */
 .phan-hoi {
     background-color: var(--main-color);
@@ -441,6 +451,68 @@ a {
 .team-items-text span {
     color: var(--text-color);
 }
+/* Dat ban ngay */
+.booking-section {
+    background-color: var(--main-color);
+    padding: 50px 0;
+}
+.booking-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--bg--color);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.booking-form-container h2{
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-color);
+    font-size: 16px;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--sub-color);
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: var(--bg--color);
+    color: var(--text-color);
+}
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--main-color);
+    outline: none;
+}
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--sub-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button[type="submit"]:hover {
+    background-color: var(--main-color);
+}
+.error-message {
+    color: red; /* Màu đỏ cho lỗi */
+    font-size: 12px; /* Kích thước phông chữ nhỏ */
+    margin-top: 5px; /* Khoảng cách phía trên */
+}
+
 /* Footer */
 .footer {
     padding-top: 80px ;
@@ -497,3 +569,106 @@ a {
     margin-top: 20px; 
     border-top: 2px solid var(--bg--color);
 }
+/* ---about.html */
+.story {
+    background-color: var(--main-color); /* Nền màu chính */
+    padding: 50px 0;
+}
+
+.story-content {
+    color: #ffffff; /* Màu chữ trắng */
+    text-align: center;
+}
+
+.story h2 {
+    font-size: 2.5rem; /* Kích thước chữ tiêu đề lớn hơn */
+    color: var(--sub-color); /* Màu chữ tiêu đề */
+    margin-bottom: 20px;
+}
+
+.story p {
+    font-size: 1.125rem; /* Kích thước chữ nội dung câu chuyện */
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 800px;
+}
+.story-image {
+    max-width: 100%; /* Đảm bảo hình ảnh không vượt quá kích thước của container */
+    height: auto; /* Giữ tỷ lệ kích thước hình ảnh */
+    display: block; /* Để căn giữa */
+    margin: 20px auto; /* Tạo khoảng cách phía trên và dưới hình ảnh, căn giữa */
+}
+/* CSS cho thông báo thành công */
+#notification {
+    display: none; /* Ẩn thông báo mặc định */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--main-color); 
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    font-family: 'Roboto', sans-serif;
+}
+
+#notification.hidden {
+    display: none; /* Ẩn thông báo khi có lớp hidden */
+}
+
+/* popup */
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+.popup-content {
+    color: #fff;
+    background-color: #000;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #EAA023;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+.popup-content--div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.popup-content--div > * {
+    margin-top: 8px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover, 
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;;
+}
+

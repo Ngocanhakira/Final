@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="res.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="fontawesome-free-6.6.0-web/css/all.min.css">
+    <title>Website-Restaurant - New Page</title>
+</head>
+<body>
+    <!-- Section class "top" -->
+    <section class="top">
+        <div class="container">
+            <div class="row justify-content">
+                <div class="logo"><img src="images/logo1.svg" alt=""></div>
+                <!-- Giữ nguyên nút menu-bar nếu bạn muốn sử dụng cho mục đích khác -->
+                <div class="menu-bar">
+                    <span></span>
+                </div>
+                <div class="menu-items">
+                    <ul>
+                        <li class="menu-item"><a href="index.html">Home</a></li>
+                        <li class="menu-item"><a href="about.html">About us</a></li>
+                        <li class="menu-item"><a href="index.html#menu">Menu</a></li>
+                        <li class="menu-item"><a href="index.html#feedback">Feedback</a></li>
+                        <li class="menu-item"><a href="index.html#workforce">Workforce</a></li>
+                        <li class="menu-item"><a href="book.html">Book</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="big-image">
+        <div class="big-image-content" data-aos="fade-up" data-aos-duration="1500">
+            <h2>Book a table</h2>
+        </div>
+    </section>
+    <section id="book" class="booking-section">
+        <div class="booking-form-container">
+            <div class="section-title">
+                <h2 data-title="experience">Book a table</h2>
+            </div>
+    
+            <form id="booking-form-1" method="get">
+                <div class="form-group">
+                    <label for="name-1">Full name*</label>
+                    <input type="text" id="name-1" name="name" > 
+                    <small class="error-message" id="name-error-1"></small>
+                </div>
+                <div class="form-group">
+                    <label for="phone-1">Phone number*</label>
+                    <input type="tel" id="phone-1" name="phone" pattern="[0-9]*"  >
+                    <small class="error-message" id="phone-error-1"></small>
+                </div>
+                <div class="form-group">
+                    <label for="time-1">Time*</label>
+                    <input type="time" id="time-1" name="time" >
+                    <small class="error-message" id="time-error-1"></small>
+                </div>
+                <div class="form-group">
+                    <label for="guests-1">Number of guests*</label>
+                    <input type="number" id="guests-1" name="guests" min="1" >
+                    <small class="error-message" id="guests-error-1"></small>
+                </div>
+                <div class="form-group">
+                    <label for="email-1">Email*</label>
+                    <input type="email" id="email-1" name="email" >
+                    <small class="error-message" id="email-error-1"></small>
+                </div>
+                <div class="form-group">
+                    <label for="note-1">Note/Special request</label>
+                    <textarea id="note-1" name="note"></textarea>
+                    <small class="error-message" id="note-error-1"></small>
+                </div>
+                <button id="submit-btn-1" type="submit">Submit</button>
+            </form>
+            <div id="popup-1" class="popup">
+                <div class="popup-content">
+                    <span id="closePopupBtn-1" class="close">&times;</span>
+                    <div class="popup-content--div">
+                        <h2>Popup Title</h2>
+                        <p>This is a simple popup example</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="footer">
+        <div class="footer-bg">
+
+        </div>
+        <div class="container">
+            <div class="row justify-content">
+                <div class="footer-item">
+                    <h2>Address</h2>
+                    <p>144 Xuân Thủy <br>Cầu Giấy, Hà Nội </p>
+                </div>
+                <div class="footer-item">
+                    <h2>Opening hours</h2>
+                    <p>9:30 - 23:00 <br>Every Day </p>
+                </div>
+                <div class="footer-item">
+                    <h2>Contact</h2>
+                    <p>Phone: 0378142869 <br>Email: met2108009@hsb.edu.vn </p>
+                    <div class="footer-social">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="container">
+            <div class="footer-copyright">
+                @2024. Toàn bộ bản quyền thuộc Ngọc Ánh
+            </div>
+        </div>
+    </section>
+
+</body>
+<script src="book.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>    
+</html>
+

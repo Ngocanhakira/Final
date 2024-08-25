@@ -3,3 +3,7 @@ git add .
 git commit -m "mô-tả-commit"
 git remote add origin " ... địa chỉ url kho lưu trữ git/github"
 git push -u origin master
+
+
+- Hoặc 1 dòng gộp 3 lệnh push code lên git repo:
+git add . && git commit -m "..." && git push
