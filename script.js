@@ -21,21 +21,21 @@ window.addEventListener('scroll', () => {
 });
 
 // Handle menu item clicks
-menuTitle.addEventListener('click', event => {
-    const menuButton = event.target.closest('.menu-button');
-    if (menuButton) {
-        const target = menuButton.getAttribute('data-title');
+// menuTitle.addEventListener('click', event => {
+//     const menuButton = event.target.closest('.menu-button');
+//     if (menuButton) {
+//         const target = menuButton.getAttribute('data-title');
 
-        // Toggle active state for menu items
-        menuTitle.querySelector('.active').classList.remove('active');
-        menuButton.classList.add('active');
+//         // Toggle active state for menu items
+//         menuTitle.querySelector('.active').classList.remove('active');
+//         menuButton.classList.add('active');
 
-        // Toggle active state for menu content
-        const menuContent = document.querySelector('.menu');
-        menuContent.querySelector('.menu-item-content.active').classList.remove('active');
-        menuContent.querySelector(`.${target}`).classList.add('active');
-    }
-});
+//         // Toggle active state for menu content
+//         const menuContent = document.querySelector('.menu');
+//         menuContent.querySelector('.menu-item-content.active').classList.remove('active');
+//         menuContent.querySelector(`.${target}`).classList.add('active');
+//     }
+// });
 // CODE CỦA PHẦN FORM
 // Handle form submission with validation
 bookingForm.addEventListener('submit', event => {
@@ -98,3 +98,24 @@ closePopupBtn.addEventListener('click', function(e){
         popup.style.display = 'none'
     }
 })
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const menuButtons = document.querySelectorAll('.menu-button');
+    const menuContents = document.querySelectorAll('.menu-item-content');
+
+    menuButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            menuButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            menuContents.forEach(content => content.classList.remove('active'));
+
+            const targetId = button.getAttribute('data-title');
+            const targetContent = document.querySelector(targetId);
+            if (targetContent) {
+                targetContent.classList.add('active');
+            }
+        });
+    });
+});
